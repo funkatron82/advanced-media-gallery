@@ -81,9 +81,9 @@ AMG.Lib = AMG.Lib || {};
 		
 		toggleSelectMedia: function() {
 			if( !this.isSelected )
-				this.triggerMethod( 'select' );
+				this.selectMedia();
 			else
-				this.triggerMethod( 'unselect' );
+				this.unselectMedia();
 		},
 		
 		updateOrder: function( index ) {
