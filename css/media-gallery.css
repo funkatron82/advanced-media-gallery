@@ -1,0 +1,237 @@
+@charset "utf-8";
+/* CSS Document */
+#amg-gallery-main {
+	margin-bottom: 20px;
+	position:relative;
+	min-width: 255px;
+	padding: 0;
+	line-height: 1;	
+}
+.amg-media-list {
+	overflow: hidden;
+}
+
+.amg-media-list li {
+	position:relative;
+	width: 200px;
+	height: 200px;
+	display: block;
+	float:left;
+	background-color: #666;
+	margin: 0 5px 5px 0;
+	overflow:hidden;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;	
+}
+
+.amg-media-list li .amg-media-remove {
+	position: absolute;
+	display: none;
+	text-decoration: none;
+	top: 5px;
+	right: 7px;
+	width: 20px;
+	height: 20px;
+	z-index: 1000;	
+}
+
+.amg-media-list li:hover .amg-media-remove {
+	display: block;
+}
+.amg-media-list li .amg-media-remove-icon {
+	display: block;
+	margin: 0 auto 0;
+	width: 20px;
+	height: 20px;
+	background-image: none;
+}
+.amg-media-list li .amg-media-remove-icon:before {
+	content: "\f335";
+	font-size: 20px;	
+}
+
+.amg-media-list .landscape img {
+	max-height: 100%;	
+}
+
+.amg-media-list .portrait img {
+	max-width: 100%;	
+}
+
+.amg-media-status {
+	position: absolute;
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;	
+}
+
+.amg-media-list li:hover .amg-media-status {
+	backgrounf-color: #000000;
+	background-color: rgba( 0, 0, 0, 0.6 );	
+}
+
+.amg-media-list i:before {
+	color: #FFFFFF;	
+	font-family: dashicons;
+	font-style:normal;
+	font-weight:400;
+	speak: none;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;	
+}
+
+.amg-media-status .amg-media-status-icon {
+  	display: inline-block;
+    width: 100%;
+	font-size: 80px;
+	line-height:200px;
+	cursor:pointer;
+	text-align:center;
+}
+
+.audio .amg-media-status .amg-media-status-icon:before {
+	content: "\f127";
+}
+
+.video .amg-media-status .amg-media-status-icon:before {
+	content: "\f126";
+}
+
+.amg-media-list .selected .amg-media-status .amg-media-status-icon:before {
+	content: "\f147";
+}
+
+.amg-media-list .selected .amg-media-status,
+.amg-media-list .selected:hover .amg-media-status {
+	background-color: #21759B;
+	background-color: rgba(33, 117, 155, 0.6);	
+}
+
+.amg-media-list .removed .amg-media-status,
+.amg-media-list .removed:hover .amg-media-status {
+	background-color: #FF0000;
+	background-color: rgba(255, 0, 0, 0.6);
+}
+
+.amg-media-list .removed  {
+	-webkit-animation: media-fade 0.5s 1 forwards, media-exit 0.5s 1 forwards; /* Safari 4+ */
+	-webkit-animation-delay: 0s, 0.5s;
+	-moz-animation:    media-fade 0.5s 1 forwards, media-exit 0.5s 1 forwards;
+	-moz-animation-delay: 0s, 0.5s;
+	-o-animation:      media-fade 0.5s 1 forwards, media-exit 0.5s 1 forwards;
+	-o-animation-delay: 0s, 0.5s;
+	animation:         media-fade 0.5s 1 forwards, media-exit 0.5s 1 forwards;
+	animation-delay: 0s, 0.5s;
+}
+
+@-webkit-keyframes media-fade {
+	0% { 
+		opacity: 1; 
+	}
+	100% { 
+		opacity: 0;
+	}
+}
+
+@-moz-keyframes media-fade {
+	0% { 
+		opacity: 1; 
+	}
+	100% { 
+		opacity: 0;
+	}
+}
+
+@-o-keyframes media-fade {
+	0% { 
+		opacity: 1; 
+	}
+	100% { 
+		opacity: 0;
+	}
+}
+@keyframes media-fade {
+  	0% { 
+		opacity: 1; 
+	}
+	100% { 
+		opacity: 0;
+	}
+}
+
+@-webkit-keyframes media-exit {
+	0%{ 
+		width: 200px; 
+	}
+	100% { 
+  		width: 0; 
+		margin:0;
+	}
+}
+
+@-moz-keyframes media-exit {
+	0%{ 
+		width: 200px; 
+	}
+	100% { 
+  		width: 0; 
+		margin:0;
+	}
+}
+
+@-o-keyframes media-exit {
+	0%{ 
+		width: 200px; 
+	}
+	100% { 
+  		width: 0; 
+		margin:0;
+	}
+}
+@keyframes media-exit {
+	0%{ 
+		width: 200px; 
+	}
+	100% { 
+  		width: 0; 
+		margin:0;
+	}}
+
+.amg-media-list .removed .amg-media-status .amg-media-status-icon:before {
+	content: "\f335";
+}
+
+
+#amg-action-bar .amg-add-media-button {
+	padding-left: 5px;	
+}
+#amg-action-bar .button .amg-buttons-icon {
+	display: inline-block;
+	width: 18px;
+	height: 18px;
+	vertical-align: text-top;
+	margin: 0 2px;
+}
+#amg-action-bar .button .amg-buttons-icon:before {
+	font: 400 18px/1 dashicons;
+	speak: none;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;	
+}
+
+.amg-add-media-button .amg-buttons-icon:before {
+	content: '\f104';
+}
+
+.amg-action-layout div {
+	display:inline-block;	
+}
+
+.manage-column.column-gallery_type {
+	width: 1.5em;	
+}
